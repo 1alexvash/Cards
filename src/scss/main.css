@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  width: 100%;
+}
+
+body,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+.App {
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px;
+  font-size: 20px;
+  -webkit-box-shadow: 1px 1px 10px 1px white;
+          box-shadow: 1px 1px 10px 1px white;
+}
+
+@media (max-width: 360px) {
+  .App {
+    width: 100%;
+  }
+}
+
+.App .HomeScreen .title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  font-family: cursive;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: 1.5s showTitle;
+          animation: 1.5s showTitle;
+}
+
+@-webkit-keyframes showTitle {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes showTitle {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.App .HomeScreen .title a {
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.App .HomeScreen .title a:hover:not(.active) {
+  color: deepskyblue;
+}
+
+.App .HomeScreen .title a.active {
+  color: deepskyblue;
+  cursor: default;
+}
+
+.App .HomeScreen .alphabet {
+  margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App .HomeScreen .alphabet .box {
+  width: 16.7%;
+  text-align: center;
+}
+
+.App .HomeScreen .alphabet .box .letter {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+  border: 1px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation: popLetter 1s;
+          animation: popLetter 1s;
+}
+
+@-webkit-keyframes popLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popLetter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.App .HomeScreen .alphabet .box .letter:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  background: deepskyblue;
+  border-color: black;
+}
+
+.App .HomeScreen .alphabet .box .letter.active {
+  background: deepskyblue;
+}
+
+.App .HomeScreen .list {
+  text-align: center;
+}
+
+.App .HomeScreen .list a {
+  color: white;
+  font-family: cursive;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.App .HomeScreen .list a:hover, .App .HomeScreen .list a.active {
+  display: block;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: deepskyblue;
+}
+
+.App .HomeScreen .list a.active {
+  cursor: default;
+}
+
+.App .HomeScreen .random-Button {
+  margin: 20px 0;
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 20px;
+  border: 2px solid black;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .HomeScreen .random-Button:hover {
+  background: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.App .ListScreen a {
+  color: white;
+  margin: 10px 0;
+  display: block;
+  border-bottom: 1px solid white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .ListScreen a:hover {
+  color: deepskyblue;
+}
+
+.Idiom {
+  border: 1px solid white;
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 10px;
+}
+
+.Idiom .name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Idiom .meaning {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-style: italic;
+  font-size: 15px;
+  color: #e0e0e0;
+}
+
+.Idiom .example {
+  color: #ededed;
+}
+
+.Idiom:first-of-type {
+  margin-top: 0;
+}
+
+.spinner {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.spinner div {
+  position: absolute;
+  border: 6px solid deepskyblue;
+  opacity: 1;
+  border-radius: 50%;
+  -webkit-animation: spinner 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+          animation: spinner 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.spinner div:nth-child(2) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    top: 60px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    top: 60px;
+    left: 60px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+  }
+}

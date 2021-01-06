@@ -1,0 +1,37 @@
+.alphabet {
+  margin: 15px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .box {
+    width: 16.7%;
+    text-align: center;
+    .letter {
+      display: block;
+      user-select: none;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+      margin: 5px;
+      border: 1px solid white;
+      transition: 0.3s;
+      animation: popLetter 1s;
+      @keyframes popLetter {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      &:hover {
+        transform: scale(1.2);
+        background: deepskyblue;
+        border-color: black;
+      }
+      &.active {
+        background: deepskyblue;
+      }
+    }
+  }
+}
